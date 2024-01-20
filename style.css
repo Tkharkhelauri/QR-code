@@ -1,66 +1,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 :root {
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-gray: hsl(212, 45%, 89%);
-    --clr-grayblue: hsl(220, 15%, 55%);
-    --clr-darkblue: hsl(218, 44%, 22%);
+    --clr-white: 0, 0%, 100%;
+    --clr-gray: 212, 45%, 89%;
+    --clr-grayblue: 220, 15%, 55%;
+    --clr-darkblue: 218, 44%, 22%;
+    --ff-primary: 'Outfit';
 
 }
 
 body {
-    font-family: 'Outfit';
-    font-style: normal;
-    background-color: var(--clr-gray);
+    background-color: hsl(var(--clr-gray));
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.flex {display: flex}
+.flex-col {flex-direction: column;}
+.justify-center {justify-content: center;}
+.items-center {align-items: center;}
+
+.rounded-md {border-radius: 20px;}
+.p-md {padding: 20px}
+.text-center {text-align: center;}
+
+.card,
+.card__content,
+.card__image {
+    max-width: 300px;
 }
 
 .card {
-    background-color: var( --clr-white);
-    display: flex;
-    flex-direction: column;
-     padding: 20px;
-    border-radius: 20px;
-    max-width: 300px;
-
+    background-color: hsl(var(--clr-white));
 }
 
 .card__image {
-    border-radius: 20px;
     width: 100%;
-    max-width: 300px;
     object-fit: contain;
 }
 
-.card__content {
-    max-width: 300px;
-}
-.card__title, .card__description {
-    text-align: center;
-    font-family: 'Outfit';
-    padding: 20px 20px;
-    
-}
 .card__title {
     font-weight: 700;
-    color: var(--clr-darkblue);
+    color: hsl(var(--clr-darkblue));
     font-size: 22px;
     line-height: 28px;
     padding-bottom: 0;
+    margin-bottom: 20px;
 }
 
 .card__description {
     font-weight: 400;
-    color: var(--clr-grayblue);
+    color: hsl(var(--clr-grayblue));
     font-size: 15px;
     line-height: 20px;
 }
 
-@media (min-width:1440px) {
-/* ? */
-}
